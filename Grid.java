@@ -53,4 +53,16 @@ public class Grid
 		}
 		return distance;
 	}
+
+	public int averageDistance()
+	{
+		int tot;
+
+		for(int i = 0; i < numberOrders; i++)
+		{
+			tot += getClosestWarehouseWithProducts(orders.get(i).target.row, orders.get(i).target.cloumn, orders.get(i).products);
+		}
+
+		return tot/numberOrders;
+	}
 }
