@@ -53,4 +53,48 @@ public class Grid
 		}
 		return distance;
 	}
+	
+	public void map()
+	{
+		int Ohot;
+		int Sum_Ohot;
+		int Sum_NOhot;
+		
+		int Whot;
+		int Sum_Whot;
+		
+		int Ahot;
+		
+		for (order = 0; order < order.size; order++)
+		{
+			if ((weight < drone_payload) & (dist < average_dist))
+			{
+				Ohot = 1;
+				Sum_Ohot++;
+			}
+			else
+			{
+				Ohot = 0;
+				Sum_NOhot++;
+			}	
+		}
+		
+		for (warehouse = 0; warehouse < warehouse.size; warehouse++)
+		{
+			if (Sum_Ohot >= Sum_NOhot)
+			{
+				Whot = 1;
+				Sum_Whot++;
+			}
+			else
+			{
+				Whot = 0;
+			}		
+		}
+						
+		for (cell = 0; cell < cell.size; cell++)
+		{
+			Ahot = Sum_Whot;	
+		}
+	}
 }
