@@ -71,5 +71,6 @@ public class Beer
 		// START DOING SHIT
 
 		Grid grid = new Grid(columns, rows, drones, turns, payload, warehouses, orders);
+		grid.run();
 	}
 }
